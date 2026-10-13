@@ -1,0 +1,29 @@
+<resources>
+    <color name="amalfis_primary">#0D3B66</color>
+    <color name="amalfis_primary_dark">#092A4A</color>
+    <color name="amalfis_accent">#F4A300</color>
+    <color name="white">#FFFFFF</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="background">#EFF3F7</color>
+    <color name="icon_bg_camera">#F4A300</color>
+    <color name="icon_bg_gallery">#2A9D8F</color>
+    <color name="icon_bg_site">#3A86FF</color>
+    <color name="text_on_dark">#FFFFFF</color>
+    <color name="text_on_dark_secondary">#B8C7D9</color>
+    <color name="text_caption">#8A97A6</color>
+
+    <!-- Tela de configurações -->
+    <color name="icon_bg_battery">#06A77D</color>
+    <color name="icon_bg_brightness">#F4A300</color>
+    <color name="icon_bg_restart">#3A86FF</color>
+    <color name="icon_bg_shutdown">#6C7A89</color>
+    <color name="icon_bg_exit">#E63946</color>
+    <color name="icon_bg_rotation">#5B4B8A</color>
+    <color name="icon_bg_wifi">#3A86FF</color>
+    <color name="icon_bg_airplane">#2A9D8F</color>
+    <color name="danger">#E63946</color>
+    <color name="danger_dark">#B4222E</color>
+    <color name="divider">#E3E9F0</color>
+    <color name="section_label">#5B6B7C</color>
+    <color name="row_ripple">#140D3B66</color>
+</resources>
