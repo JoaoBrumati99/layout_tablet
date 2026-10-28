@@ -8,6 +8,7 @@
     <color name="icon_bg_camera">#F4A300</color>
     <color name="icon_bg_gallery">#2A9D8F</color>
     <color name="icon_bg_site">#3A86FF</color>
+    <color name="icon_bg_tkron">#7209B7</color>
     <color name="text_on_dark">#FFFFFF</color>
     <color name="text_on_dark_secondary">#B8C7D9</color>
     <color name="text_caption">#8A97A6</color>

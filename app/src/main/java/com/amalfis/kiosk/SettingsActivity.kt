@@ -42,6 +42,7 @@ class SettingsActivity : AppCompatActivity() {
         configurarBrilho()
         configurarRotacao()
         configurarTemporizador()
+        configurarOcultarAtalhos()
 
         findViewById<ImageButton>(R.id.btnBack).setOnClickListener { finish() }
         findViewById<View>(R.id.btnWifi).setOnClickListener { abrirConfiguracoesWifi() }
@@ -444,6 +445,31 @@ class SettingsActivity : AppCompatActivity() {
             atualizarTextosTemporizador()
             ScheduleManager.updateAlarms(this)
         }, h, m, true).show()
+    }
+
+    private fun configurarOcultarAtalhos() {
+        val switchCamera = findViewById<Switch>(R.id.switchHideCamera)
+        val switchGallery = findViewById<Switch>(R.id.switchHideGallery)
+        val switchTaylo = findViewById<Switch>(R.id.switchHideTaylo)
+        val switchTkron = findViewById<Switch>(R.id.switchHideTkron)
+
+        switchCamera.isChecked = ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_CAMERA)
+        switchGallery.isChecked = ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_GALLERY)
+        switchTaylo.isChecked = ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_SITE)
+        switchTkron.isChecked = ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_TKRON)
+
+        switchCamera.setOnCheckedChangeListener { _, isChecked ->
+            ScreenPrefs.setCardHidden(this, ScreenPrefs.CARD_CAMERA, isChecked)
+        }
+        switchGallery.setOnCheckedChangeListener { _, isChecked ->
+            ScreenPrefs.setCardHidden(this, ScreenPrefs.CARD_GALLERY, isChecked)
+        }
+        switchTaylo.setOnCheckedChangeListener { _, isChecked ->
+            ScreenPrefs.setCardHidden(this, ScreenPrefs.CARD_SITE, isChecked)
+        }
+        switchTkron.setOnCheckedChangeListener { _, isChecked ->
+            ScreenPrefs.setCardHidden(this, ScreenPrefs.CARD_TKRON, isChecked)
+        }
     }
 
     companion object {

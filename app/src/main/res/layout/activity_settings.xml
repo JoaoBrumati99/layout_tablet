@@ -742,7 +742,200 @@
 
             </LinearLayout>
 
-            <!-- 4. SEÇÃO: ÁREA RESTRITA -->
+            <!-- 4. SEÇÃO: ATALHOS DA TELA PRINCIPAL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/section_shortcuts"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/section_label"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/settings_card_background"
+                android:elevation="0dp"
+                android:padding="16dp"
+                android:layout_marginBottom="20dp">
+
+                <!-- Ocultar Câmera -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_camera"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/amalfis_primary_dark"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_camera_caption"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_caption"/>
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switchHideCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/amalfis_primary"
+                        android:trackTint="@color/divider"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Ocultar Galeria -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_gallery"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/amalfis_primary_dark"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_gallery_caption"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_caption"/>
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switchHideGallery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/amalfis_primary"
+                        android:trackTint="@color/divider"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Ocultar Taylo -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_taylo"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/amalfis_primary_dark"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_taylo_caption"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_caption"/>
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switchHideTaylo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/amalfis_primary"
+                        android:trackTint="@color/divider"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginBottom="12dp"/>
+
+                <!-- Ocultar Tkron -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_tkron"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/amalfis_primary_dark"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hide_tkron_caption"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_caption"/>
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/switchHideTkron"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:thumbTint="@color/amalfis_primary"
+                        android:trackTint="@color/divider"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 5. SEÇÃO: ÁREA RESTRITA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

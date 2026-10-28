@@ -57,4 +57,15 @@
     <string name="weather_condition">Ensolarado</string>
     <string name="time_label">Horário</string>
     <string name="date_label">Data</string>
+    <string name="tkron_site">Tkron</string>
+    <string name="tkron_caption">Acessar Tkron</string>
+    <string name="section_shortcuts">Atalhos da Tela Principal</string>
+    <string name="hide_camera">Ocultar Câmera</string>
+    <string name="hide_camera_caption">Remove o atalho de câmera da tela principal</string>
+    <string name="hide_gallery">Ocultar Galeria</string>
+    <string name="hide_gallery_caption">Remove o atalho de galeria da tela principal</string>
+    <string name="hide_taylo">Ocultar Taylo</string>
+    <string name="hide_taylo_caption">Remove o atalho do Taylo da tela principal</string>
+    <string name="hide_tkron">Ocultar Tkron</string>
+    <string name="hide_tkron_caption">Remove o atalho do Tkron da tela principal</string>
 </resources>

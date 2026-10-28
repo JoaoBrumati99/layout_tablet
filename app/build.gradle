@@ -20,8 +20,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        config {
+            storeFile file("amalfis_signing.jks")
+            storePassword "amalfis123"
+            keyAlias "amalfisKey"
+            keyPassword "amalfis123"
+        }
+    }
+
     buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
         release {
+            signingConfig signingConfigs.config
             optimization {
                 enable false
             }

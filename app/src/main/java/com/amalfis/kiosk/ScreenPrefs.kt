@@ -13,6 +13,11 @@ object ScreenPrefs {
     private const val PREFS_NAME = "amalfis_kiosk_prefs"
     private const val KEY_ROTATION_ENABLED = "screen_rotation_enabled"
 
+    const val CARD_CAMERA = "card_camera"
+    const val CARD_GALLERY = "card_gallery"
+    const val CARD_SITE = "card_site"
+    const val CARD_TKRON = "card_tkron"
+
     fun isRotationEnabled(context: Context): Boolean {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         return prefs.getBoolean(KEY_ROTATION_ENABLED, false)
@@ -21,6 +26,16 @@ object ScreenPrefs {
     fun setRotationEnabled(context: Context, enabled: Boolean) {
         val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
         prefs.edit().putBoolean(KEY_ROTATION_ENABLED, enabled).apply()
+    }
+
+    fun isCardHidden(context: Context, key: String): Boolean {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getBoolean(key, false)
+    }
+
+    fun setCardHidden(context: Context, key: String, hidden: Boolean) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putBoolean(key, hidden).apply()
     }
 
     /**

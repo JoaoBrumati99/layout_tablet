@@ -49,9 +49,12 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.cardCamera).setOnClickListener { openCamera() }
         findViewById<View>(R.id.cardGallery).setOnClickListener { openGallery() }
         findViewById<View>(R.id.cardSite).setOnClickListener { openSite() }
+        findViewById<View>(R.id.cardTkron).setOnClickListener { openTkron() }
         findViewById<View>(R.id.cardSettings).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
+
+        atualizarVisibilidadeCards()
 
         devicePolicyManager = getSystemService(DEVICE_POLICY_SERVICE) as DevicePolicyManager
         adminComponent = ComponentName(this, AdminReceiver::class.java)
@@ -64,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onResume")
         ScreenPrefs.applyOrientation(this)
         ImmersiveMode.apply(this)
+        atualizarVisibilidadeCards()
         enterKioskMode()
         handler.post(timeRunnable)
     }
@@ -288,7 +292,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openSite() {
-        startActivity(Intent(this, WebActivity::class.java))
+        startActivity(WebActivity.intentFor(this, "https://taylo.amalfis.com.br/amalfis/login", "taylo.amalfis.com.br"))
+    }
+
+    private fun openTkron() {
+        startActivity(WebActivity.intentFor(this, "https://tkron.com.br/home-mobile", "tkron.com.br"))
+    }
+
+    private fun atualizarVisibilidadeCards() {
+        findViewById<View>(R.id.cardCamera).visibility = if (ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_CAMERA)) View.GONE else View.VISIBLE
+        findViewById<View>(R.id.cardGallery).visibility = if (ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_GALLERY)) View.GONE else View.VISIBLE
+        findViewById<View>(R.id.cardSite).visibility = if (ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_SITE)) View.GONE else View.VISIBLE
+        findViewById<View>(R.id.cardTkron).visibility = if (ScreenPrefs.isCardHidden(this, ScreenPrefs.CARD_TKRON)) View.GONE else View.VISIBLE
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
